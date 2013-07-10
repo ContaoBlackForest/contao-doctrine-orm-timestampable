@@ -14,3 +14,4 @@
  */
 
 $GLOBALS['TL_HOOKS']['prepareDoctrineEventManager']['doctrine-orm-timestampable'] = array('Contao\Doctrine\ORM\Timestampable\Bridge', 'init');
+$GLOBALS['TL_EVENTS'][\Contao\Doctrine\ORM\Event\DuplicateEntity::EVENT_NAME][] = array('Contao\Doctrine\ORM\Timestampable\Bridge', 'duplicateEntity');
