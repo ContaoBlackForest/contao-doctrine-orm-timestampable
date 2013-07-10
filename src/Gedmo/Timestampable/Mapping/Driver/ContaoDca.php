@@ -13,7 +13,7 @@
  * @filesource
  */
 
-namespace Contao\Doctrine\ORM\Timestampable\Mapping\Driver;
+namespace Gedmo\Timestampable\Mapping\Driver;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Gedmo\Mapping\Driver;
@@ -25,11 +25,9 @@ class ContaoDCA extends \Controller implements Driver
 	 */
 	protected $originalDriver = null;
 
-	static public function init(\Doctrine\Common\EventManager $eventManager)
+	public function __construct()
 	{
-		$timestampableListener = new TimestampableListener();
-		$timestampableListener->setAnnotationReader(new static());
-		$eventManager->addEventSubscriber($timestampableListener);
+		parent::__construct();
 	}
 
 	/**
@@ -44,12 +42,12 @@ class ContaoDCA extends \Controller implements Driver
 		$dca    = (array) $GLOBALS['TL_DCA'][$tableName];
 		$fields = (array) $dca['fields'];
 		foreach ($fields as $fieldName => $field) {
-			if (isset($field['entity']['timestampable']['on'])) {
-				$config[$field['entity']['timestampable']['on']][] = array(
+			if (isset($field['field']['timestampable']['on'])) {
+				$config[$field['field']['timestampable']['on']][] = array(
 					'field'        => $fieldName,
 					'trackedField' => $fieldName,
-					'value'        => isset($field['entity']['timestampable']['value'])
-						? $field['entity']['timestampable']['value']
+					'value'        => isset($field['field']['timestampable']['value'])
+						? $field['field']['timestampable']['value']
 						: null
 				);
 			}

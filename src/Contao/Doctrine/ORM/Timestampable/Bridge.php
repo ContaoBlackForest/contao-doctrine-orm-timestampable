@@ -15,6 +15,7 @@
 
 namespace Contao\Doctrine\ORM\Timestampable;
 
+use Contao\Doctrine\ORM\Timestampable\Mapping\Driver\ContaoDCA;
 use Gedmo\Timestampable\TimestampableListener;
 
 class Bridge
@@ -22,6 +23,7 @@ class Bridge
 	static public function init(\Doctrine\Common\EventManager $eventManager)
 	{
 		$timestampableListener = new TimestampableListener();
+		// $timestampableListener->getConfiguration()->setDriver(new ContaoDCA());
 		$eventManager->addEventSubscriber($timestampableListener);
 	}
 }
