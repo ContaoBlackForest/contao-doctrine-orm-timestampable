@@ -23,7 +23,6 @@ class Bridge
 	static public function init(\Doctrine\Common\EventManager $eventManager)
 	{
 		$timestampableListener = new TimestampableListener();
-		// $timestampableListener->getConfiguration()->setDriver(new ContaoDCA());
 		$eventManager->addEventSubscriber($timestampableListener);
 	}
 }

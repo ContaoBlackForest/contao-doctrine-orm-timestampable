@@ -37,19 +37,13 @@ class ContaoDCA extends \Controller implements Driver
 	 */
 	public function readExtendedMetadata($meta, array &$config)
 	{
-		$tableName = $meta->getName();
+		$tableName = $meta->getTableName();
 		$this->loadDataContainer($tableName);
 		$dca    = (array) $GLOBALS['TL_DCA'][$tableName];
 		$fields = (array) $dca['fields'];
 		foreach ($fields as $fieldName => $field) {
 			if (isset($field['field']['timestampable']['on'])) {
-				$config[$field['field']['timestampable']['on']][] = array(
-					'field'        => $fieldName,
-					'trackedField' => $fieldName,
-					'value'        => isset($field['field']['timestampable']['value'])
-						? $field['field']['timestampable']['value']
-						: null
-				);
+				$config[$field['field']['timestampable']['on']][] = $fieldName;
 			}
 		}
 	}
