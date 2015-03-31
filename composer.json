@@ -25,10 +25,9 @@
         }
 	],
 	"support":{
-		"email":"info@bit3.de",
-		"issues":"https://github.com/bit3/contao-doctrine-orm-timestampable/issues",
+		"issues":"https://github.com/ContaoBlackforest/contao-doctrine-orm-timestampable/issues",
 		"irc":"irc://irc.freenode.org/contao.dev",
-		"source":"https://github.com/bit3/contao-doctrine-orm-timestampable"
+		"source":"https://github.com/ContaoBlackforest/contao-doctrine-orm-timestampable"
 	},
 	"require":{
 		"php":">=5.3",
