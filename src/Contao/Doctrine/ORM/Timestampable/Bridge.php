@@ -2,18 +2,19 @@
 
 /**
  * Doctrine ORM timestampable bridge
- * Copyright (C) 2013 Tristan Lins
  *
  * PHP version 5
  *
- * @copyright  bit3 UG 2013
+ * @copyright  ContaoBlackForest <https://github.com/ContaoBlackforest/>
  * @author     Tristan Lins <tristan.lins@bit3.de>
+ * @author     Dominik Tomasi <dominik.tomasi@gmail.com>
+ * @author     Sven Baumann <baumannsv@gmail.com>
  * @package    doctrine-orm-timestampable
  * @license    LGPL
  * @filesource
  */
 
-namespace Contao\Doctrine\ORM\Timestampable;
+namespace ContaoBlackForest\Contao\Doctrine\ORM\Timestampable;
 
 use Contao\Doctrine\ORM\EntityAccessor;
 use Contao\Doctrine\ORM\Event\DuplicateEntity;
