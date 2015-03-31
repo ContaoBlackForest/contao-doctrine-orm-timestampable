@@ -2,22 +2,23 @@
 
 /**
  * Doctrine ORM timestampable bridge
- * Copyright (C) 2013 Tristan Lins
  *
  * PHP version 5
  *
- * @copyright  bit3 UG 2013
+ * @copyright  ContaoBlackForest <https://github.com/ContaoBlackForest/>
  * @author     Tristan Lins <tristan.lins@bit3.de>
+ * @author     Dominik Tomasi <dominik.tomasi@gmail.com>
+ * @author     Sven Baumann <baumannsv@gmail.com>
  * @package    doctrine-orm-timestampable
  * @license    LGPL
  * @filesource
  */
 
 $GLOBALS['TL_HOOKS']['prepareDoctrineEventManager']['doctrine-orm-timestampable'] = array(
-	'Contao\Doctrine\ORM\Timestampable\Bridge',
+	'ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',
 	'init'
 );
 $GLOBALS['TL_EVENTS'][\Contao\Doctrine\ORM\EntityEvents::DUPLICATE_ENTITY][] = array(
-	'Contao\Doctrine\ORM\Timestampable\Bridge',
+	'ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',
 	'duplicateEntity'
 );
