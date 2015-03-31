@@ -5,7 +5,7 @@
  *
  * PHP version 5
  *
- * @copyright  ContaoBlackForest <https://github.com/ContaoBlackforest/>
+ * @copyright  ContaoBlackForest <https://github.com/ContaoBlackForest/>
  * @author     Tristan Lins <tristan.lins@bit3.de>
  * @author     Dominik Tomasi <dominik.tomasi@gmail.com>
  * @author     Sven Baumann <baumannsv@gmail.com>
