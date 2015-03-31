@@ -27,33 +27,37 @@ use Gedmo\Timestampable\TimestampableListener;
 /**
  * Class BridgeTest
  *
- * @author Dominik Tomasi <https://github.com/dtomasi>
+ * @author  Dominik Tomasi <https://github.com/dtomasi>
  * @package ContaoBlackForest\Tests\Contao\Doctrine\ORM\Timestampable
  */
-class BridgeTest extends \PHPUnit_Framework_TestCase {
+class BridgeTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * Test to instantiate the Bridge with Namespace ContaoBlackForest
      */
-    public function testInstantiateWithCurrentNamespace() {
+    public function testInstantiateWithCurrentNamespace()
+    {
 
         $bridge = new \ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge();
-        $this->assertInstanceOf('\ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',$bridge);
+        $this->assertInstanceOf('\ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge', $bridge);
     }
 
     /**
      * Test to instantiate the Bridge with Namespace Contao for backwards compatibility
      */
-    public function testInstantiateWithOldNamespace() {
+    public function testInstantiateWithOldNamespace()
+    {
 
         $bridge = new \Contao\Doctrine\ORM\Timestampable\Bridge();
-        $this->assertInstanceOf('\ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',$bridge);
+        $this->assertInstanceOf('\ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge', $bridge);
     }
 
     /**
      * Test if TimestampableListener can successfully registered in \Doctrine\Common\EventManager
      */
-    public function testRegisterSubscriber() {
+    public function testRegisterSubscriber()
+    {
 
         $manager = new EventManager();
         Bridge::init($manager);
@@ -72,14 +76,15 @@ class BridgeTest extends \PHPUnit_Framework_TestCase {
     /**
      * Test if duplicateEntity does not throw any error with a correct configuration
      */
-    public function testDuplicateEntity() {
+    public function testDuplicateEntity()
+    {
 
         $entity = new Version();
 
         // Setup EntityAccessor
         $accessor = new EntityAccessor(new AnnotationReader());
         $GLOBALS['container']['doctrine.orm.entityAccessor'] = $accessor;
-        $event = new DuplicateEntity($entity,true);
+        $event = new DuplicateEntity($entity, true);
 
         $GLOBALS['TL_DCA'] = array(
             'orm_version' => array(

@@ -13,6 +13,8 @@
  * @filesource
  */
 
-namespace Contao\Doctrine\ORM\Timestampable {
-    class Bridge extends \ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge {}
+namespace Contao\Doctrine\ORM\Timestampable;
+
+class Bridge extends \ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge
+{
 }
