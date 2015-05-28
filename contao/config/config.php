@@ -15,10 +15,10 @@
  */
 
 $GLOBALS['TL_HOOKS']['prepareDoctrineEventManager']['doctrine-orm-timestampable'] = array(
-    'ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',
+    'Contao\Doctrine\ORM\Timestampable\Bridge',
     'init'
 );
 $GLOBALS['TL_EVENTS'][\Contao\Doctrine\ORM\EntityEvents::DUPLICATE_ENTITY][] = array(
-    'ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',
+    'Contao\Doctrine\ORM\Timestampable\Bridge',
     'duplicateEntity'
 );

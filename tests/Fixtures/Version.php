@@ -6,7 +6,7 @@
  * Time: 17:01
  */
 
-namespace ContaoBlackForest\Tests\Fixtures;
+namespace Contao\Doctrine\ORM\Timestampable\Tests\Fixtures;
 
 
 class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Contao\Doctrine\ORM\EntityInterface

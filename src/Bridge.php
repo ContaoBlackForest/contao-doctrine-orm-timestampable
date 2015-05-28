@@ -14,7 +14,7 @@
  * @filesource
  */
 
-namespace ContaoBlackForest\Contao\Doctrine\ORM\Timestampable;
+namespace Contao\Doctrine\ORM\Timestampable;
 
 use Contao\Doctrine\ORM\EntityAccessor;
 use Contao\Doctrine\ORM\Event\DuplicateEntity;

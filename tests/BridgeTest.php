@@ -13,13 +13,13 @@
  * @filesource
  */
 
-namespace ContaoBlackForest\Tests\Contao\Doctrine\ORM\Timestampable;
+namespace Contao\Doctrine\ORM\Timestampable\Tests;
 
 
 use Contao\Doctrine\ORM\EntityAccessor;
 use Contao\Doctrine\ORM\Event\DuplicateEntity;
-use ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge;
-use ContaoBlackForest\Tests\Fixtures\Version;
+use Contao\Doctrine\ORM\Timestampable\Bridge;
+use Contao\Doctrine\ORM\Timestampable\Tests\Fixtures\Version;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\EventManager;
 use Gedmo\Timestampable\TimestampableListener;
@@ -39,18 +39,8 @@ class BridgeTest extends \PHPUnit_Framework_TestCase
     public function testInstantiateWithCurrentNamespace()
     {
 
-        $bridge = new \ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge();
-        $this->assertInstanceOf('\ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge', $bridge);
-    }
-
-    /**
-     * Test to instantiate the Bridge with Namespace Contao for backwards compatibility
-     */
-    public function testInstantiateWithOldNamespace()
-    {
-
-        $bridge = new \Contao\Doctrine\ORM\Timestampable\Bridge();
-        $this->assertInstanceOf('\ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge', $bridge);
+        $bridge = new Bridge();
+        $this->assertInstanceOf('\Contao\Doctrine\ORM\Timestampable\Bridge', $bridge);
     }
 
     /**
@@ -106,6 +96,4 @@ class BridgeTest extends \PHPUnit_Framework_TestCase
 
         Bridge::duplicateEntity($event);
     }
-
-
 }

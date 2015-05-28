@@ -41,14 +41,10 @@
         "phpunit/phpunit": "3.7.*"
     },
 	"autoload":{
-		"psr-0":{
-			"Gedmo\\Timestampable\\Mapping\\Driver\\ContaoDca": "src/"
-		},
-        "psr-4":{
-          "ContaoBlackForest\\": "src/",
-          "ContaoBlackForest\\Tests\\": "tests/"
-        },
-        "files": ["src/namespace_backward_compat.php"]
+		"psr-4":{
+          "Contao\\Doctrine\\ORM\\Timestampable\\": "src/",
+          "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/"
+		}
 	},
 	"extra": {
 		"contao": {
