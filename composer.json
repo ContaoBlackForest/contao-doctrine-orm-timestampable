@@ -33,7 +33,7 @@
 		"php":">=5.3",
 		"contao/core": ">=2.11.11,<4-dev",
 		"contao-community-alliance/composer-installer": "*",
-		"bit3/contao-doctrine-orm": "~2.0",
+		"contaoblackforest/contao-doctrine-orm": "~2.0",
         "doctrine/migrations": "1.0.0-alpha3",
 		"gedmo/doctrine-extensions": "2.3.8"
 	},
