@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Doctrine ORM timestampable bridge
  *
@@ -14,11 +13,8 @@
  * @filesource
  */
 
-$GLOBALS['TL_HOOKS']['prepareDoctrineEventManager']['doctrine-orm-timestampable'] = array(
-    'ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',
-    'init'
-);
-$GLOBALS['TL_EVENTS'][\Contao\Doctrine\ORM\EntityEvents::DUPLICATE_ENTITY][] = array(
-    'ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge',
-    'duplicateEntity'
-);
+namespace Contao\Doctrine\ORM\Timestampable;
+
+class Bridge extends \ContaoBlackForest\Contao\Doctrine\ORM\Timestampable\Bridge
+{
+}

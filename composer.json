@@ -1,5 +1,5 @@
 {
-	"name":"bit3/contao-doctrine-orm-timestampable",
+	"name":"contaoblackforest/contao-doctrine-orm-timestampable",
 	"description":"Doctrine ORM Timestampable Bridge for Contao CMS",
 	"keywords":["contao", "doctrine", "orm", "timestampable"],
 	"type":"contao-module",
@@ -10,26 +10,45 @@
 			"email":"tristan.lins@bit3.de",
 			"homepage":"http://bit3.de",
 			"role":"Developer"
-		}
+		},
+        {
+            "name":"Dominik Tomasi",
+            "email":"dominik.tomasi@gmail.com",
+            "homepage":"https://github.com/ContaoBlackForest",
+            "role":"Developer"
+        },
+        {
+            "name":"Sven Baumann",
+            "email":"baumannsv@gmail.com",
+            "homepage":"https://github.com/ContaoBlackForest",
+            "role":"Developer"
+        }
 	],
 	"support":{
-		"email":"info@bit3.de",
-		"issues":"https://github.com/bit3/contao-doctrine-orm-timestampable/issues",
+		"issues":"https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable/issues",
 		"irc":"irc://irc.freenode.org/contao.dev",
-		"source":"https://github.com/bit3/contao-doctrine-orm-timestampable"
+		"source":"https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable"
 	},
 	"require":{
 		"php":">=5.3",
 		"contao/core": ">=2.11.11,<4-dev",
 		"contao-community-alliance/composer-installer": "*",
 		"bit3/contao-doctrine-orm": "~2.0",
-		"gedmo/doctrine-extensions": "*"
+        "doctrine/migrations": "1.0.0-alpha3",
+		"gedmo/doctrine-extensions": "2.3.8"
 	},
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
 	"autoload":{
 		"psr-0":{
-			"Contao\\Doctrine\\ORM\\Timestampable": "src/",
 			"Gedmo\\Timestampable\\Mapping\\Driver\\ContaoDca": "src/"
-		}
+		},
+        "psr-4":{
+          "ContaoBlackForest\\": "src/",
+          "ContaoBlackForest\\Tests\\": "tests/"
+        },
+        "files": ["src/namespace_backward_compat.php"]
 	},
 	"extra": {
 		"contao": {
