@@ -56,5 +56,8 @@
 			"dev-master": "1.0.x-dev",
 			"dev-develop": "2.0.x-dev"
 		}
-	}
+	},
+    "replace": {
+      "bit3/contao-doctrine-orm-timestampable": "self.version"
+    }
 }
