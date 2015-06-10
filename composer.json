@@ -42,8 +42,8 @@
     },
   "autoload":{
     "psr-4":{
-      "Contao\\Doctrine\\ORM\\Timestampable\\": "src/",
-      "Gedmo\\Timestampable\\Mapping\\Driver\\ContaoDca\\": "src/",
+      "Contao\\Doctrine\\ORM\\": "src/",
+      "Gedmo\\Timestampable\\Mapping\\": "src/",
       "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/"
     }
   },
