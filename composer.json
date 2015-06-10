@@ -40,12 +40,13 @@
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
     },
-	"autoload":{
-		"psr-4":{
-          "Contao\\Doctrine\\ORM\\Timestampable\\": "src/",
-          "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/"
-		}
-	},
+  "autoload":{
+    "psr-4":{
+      "Contao\\Doctrine\\ORM\\": "src/",
+      "Gedmo\\Timestampable\\Mapping\\": "src/",
+      "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/"
+    }
+  },
 	"extra": {
 		"contao": {
 			"sources": {
