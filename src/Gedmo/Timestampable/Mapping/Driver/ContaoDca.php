@@ -14,7 +14,7 @@
  * @filesource
  */
 
-namespace Contao\Doctrine\ORM\Timestampable\Mapping\Driver;
+namespace Gedmo\Timestampable\Mapping\Driver;
 
 use Gedmo\Mapping\Driver;
 
