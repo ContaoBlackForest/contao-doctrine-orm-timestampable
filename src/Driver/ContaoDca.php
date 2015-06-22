@@ -24,7 +24,7 @@ use Gedmo\Mapping\Driver;
  * @author  Tristan Lins <tristan.lins@bit3.de>
  * @package Gedmo\Timestampable\Mapping\Driver
  */
-class ContaoDCA extends \Controller implements Driver
+class ContaoDca extends \Controller implements Driver
 {
     /**
      * original driver if it is available
