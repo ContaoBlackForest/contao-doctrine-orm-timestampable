@@ -34,7 +34,7 @@
 		"contao/core": ">=2.11.11,<4-dev",
 		"contao-community-alliance/composer-plugin": "~2.0",
 		"contaoblackforest/contao-doctrine-orm": "~2.0",
-        "doctrine/migrations": "1.0.0-alpha3",
+        "doctrine/migrations": "1.0.x-dev",
 		"gedmo/doctrine-extensions": "~2.0"
 	},
     "require-dev": {
