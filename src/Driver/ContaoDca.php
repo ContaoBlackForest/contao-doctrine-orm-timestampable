@@ -1,16 +1,21 @@
 <?php
 
 /**
- * Doctrine ORM timestampable bridge
+ * This file is part of contaoblackforest/contao-doctrine-orm-timestampable.
  *
- * PHP version 5
+ * (c) 2013-2017 Contao Black Forest.
  *
- * @copyright  ContaoBlackForest <https://github.com/ContaoBlackForest/>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * This project is provided in good faith and hope to be usable by anyone.
+ *
+ * @package    contaoblackforest/contao-doctrine-orm-timestampable
  * @author     Tristan Lins <tristan.lins@bit3.de>
  * @author     Dominik Tomasi <dominik.tomasi@gmail.com>
- * @author     Sven Baumann <baumannsv@gmail.com>
- * @package    doctrine-orm-timestampable
- * @license    LGPL
+ * @author     Sven Baumann <baumann.sv@gmail.com>
+ * @copyright  2013-2017 Contao Community Alliance.
+ * @license    https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable/blob/master/LICENSE LGPL-3.0
  * @filesource
  */
 
