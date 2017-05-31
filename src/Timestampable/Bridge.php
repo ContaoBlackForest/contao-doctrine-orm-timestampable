@@ -50,6 +50,8 @@ class Bridge
      * @param DuplicateEntity $event The event.
      *
      * @return void
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public static function duplicateEntity(DuplicateEntity $event)
     {

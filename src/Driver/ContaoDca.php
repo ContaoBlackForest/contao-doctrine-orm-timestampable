@@ -44,6 +44,8 @@ class ContaoDca extends \Controller implements Driver
     /**
      * @see \Gedmo\Mapping\Driver::readExtendedMetadata()
      * {@inheritdoc}
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function readExtendedMetadata($meta, array &$config)
     {
