@@ -38,9 +38,12 @@
     "psr-4":{
       "Contao\\Doctrine\\ORM\\": "src/",
       "Gedmo\\Timestampable\\Mapping\\": "src/",
-      "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/"
     }
   },
+	"autoload-dev": {
+		"psr-4": {
+      "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/"
+	},
 	"extra": {
 		"contao": {
 			"sources": {
