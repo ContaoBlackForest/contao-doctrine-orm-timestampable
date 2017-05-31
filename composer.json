@@ -30,8 +30,8 @@
 		"source":"https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable"
 	},
 	"require":{
-		"php":">=5.3",
-		"contao/core": ">=2.11.11,<4-dev",
+		"php":">=5.4,<7.2",
+		"contao/core": ">=3.5,<4-dev",
 		"contao-community-alliance/composer-plugin": "~2.0",
 		"contaoblackforest/contao-doctrine-orm": "~2.0",
         "doctrine/migrations": "~v1.0",
