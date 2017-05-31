@@ -27,17 +27,16 @@ use Doctrine\Common\EventManager;
 use Gedmo\Timestampable\TimestampableListener;
 
 /**
- * Class Bridge
- *
- * @author Tristan Lins <tristan.lins@bit3.de>
- * @package ContaoBlackForest\Contao\Doctrine\ORM\Timestampable
+ * Contao bridge for doctrine orm timestamp able.
  */
 class Bridge
 {
     /**
-     * Initialize the Bridge
+     * Initialize the Bridge.
      *
-     * @param EventManager $eventManager
+     * @param EventManager $eventManager The event manager.
+     *
+     * @return void
      */
     public static function init(EventManager $eventManager)
     {
@@ -46,9 +45,11 @@ class Bridge
     }
 
     /**
-     * Clean timestampable entries from duplicated entities.
+     * Clean timestamp able entries from duplicated entities.
      *
-     * @param DuplicateEntity $event
+     * @param DuplicateEntity $event The event.
+     *
+     * @return void
      */
     public static function duplicateEntity(DuplicateEntity $event)
     {
@@ -59,7 +60,7 @@ class Bridge
                 /** @var EntityAccessor $entityAccessor */
                 $entityAccessor = $GLOBALS['container']['doctrine.orm.entityAccessor'];
 
-                $fields = (array)$GLOBALS['TL_DCA'][$entity->entityTableName()]['fields'];
+                $fields = (array) $GLOBALS['TL_DCA'][$entity->entityTableName()]['fields'];
                 foreach ($fields as $field => $fieldConfig) {
                     if (isset($fieldConfig['field']['timestampable'])) {
                         $entityAccessor->setRawProperty($entity, $field, null);

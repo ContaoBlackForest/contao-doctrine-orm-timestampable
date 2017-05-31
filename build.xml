@@ -5,5 +5,5 @@
    https://github.com/phpcq/phpcq
 -->
 <project name="contao-doctrine-orm-timestampable" default="build">
-    <import file="vendor/phpcq/phpcq/phpcq.main.xml" />
+    <import file="vendor/phpcq/phpcq/phpcq.main.xml"/>
 </project>

@@ -19,10 +19,17 @@
  * @filesource
  */
 
+/**
+ * Register contao hooks.
+ */
 $GLOBALS['TL_HOOKS']['prepareDoctrineEventManager']['doctrine-orm-timestampable'] = array(
     'Contao\Doctrine\ORM\Timestampable\Bridge',
     'init'
 );
+
+/**
+ * Register symfony events.
+ */
 $GLOBALS['TL_EVENTS'][\Contao\Doctrine\ORM\EntityEvents::DUPLICATE_ENTITY][] = array(
     'Contao\Doctrine\ORM\Timestampable\Bridge',
     'duplicateEntity'

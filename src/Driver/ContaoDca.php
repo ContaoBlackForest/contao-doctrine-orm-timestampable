@@ -24,15 +24,12 @@ namespace Gedmo\Timestampable\Mapping\Driver;
 use Gedmo\Mapping\Driver;
 
 /**
- * Class ContaoDCA
- *
- * @author  Tristan Lins <tristan.lins@bit3.de>
- * @package Gedmo\Timestampable\Mapping\Driver
+ * The timestamp able mapping driver for contao data container.
  */
 class ContaoDca extends \Controller implements Driver
 {
     /**
-     * original driver if it is available
+     * Original driver if it is available.
      */
     protected $originalDriver = null;
 
@@ -55,8 +52,8 @@ class ContaoDca extends \Controller implements Driver
             $this->loadDataContainer($tableName);
         }
 
-        $dca = (array)$GLOBALS['TL_DCA'][$tableName];
-        $fields = (array)$dca['fields'];
+        $dca    = (array) $GLOBALS['TL_DCA'][$tableName];
+        $fields = (array) $dca['fields'];
         foreach ($fields as $fieldName => $field) {
             if (isset($field['field']['timestampable']['on'])) {
                 $config[$field['field']['timestampable']['on']][] = $fieldName;

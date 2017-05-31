@@ -1,65 +1,70 @@
 {
-	"name":"contaoblackforest/contao-doctrine-orm-timestampable",
-	"description":"Doctrine ORM Timestampable Bridge for Contao CMS",
-	"keywords":["contao", "doctrine", "orm", "timestampable"],
-	"type":"contao-module",
-	"license":"LGPL-3.0+",
-	"authors":[
+    "name": "contaoblackforest/contao-doctrine-orm-timestampable",
+    "description": "Doctrine ORM Timestampable Bridge for Contao CMS",
+    "keywords": [
+        "contao",
+        "doctrine",
+        "orm",
+        "timestampable"
+    ],
+    "type": "contao-module",
+    "license": "LGPL-3.0+",
+    "authors": [
         {
-            "name":"Dominik Tomasi",
-            "email":"dominik.tomasi@gmail.com",
-            "homepage":"https://github.com/ContaoBlackForest",
-            "role":"Developer"
+            "name": "Dominik Tomasi",
+            "email": "dominik.tomasi@gmail.com",
+            "homepage": "https://github.com/ContaoBlackForest",
+            "role": "Developer"
         },
         {
-            "name":"Sven Baumann",
-            "email":"baumann.sv@gmail.com",
-            "homepage":"https://github.com/ContaoBlackForest",
-            "role":"Developer"
+            "name": "Sven Baumann",
+            "email": "baumann.sv@gmail.com",
+            "homepage": "https://github.com/ContaoBlackForest",
+            "role": "Developer"
         }
-	],
-	"support":{
-		"issues":"https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable/issues",
-		"irc":"irc://irc.freenode.org/contao.dev",
-		"source":"https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable"
-	},
-	"require":{
-		"php":">=5.4,<7.2",
-		"contao/core": ">=3.5,<4-dev",
-		"contao-community-alliance/composer-plugin": "~2.0",
-		"contaoblackforest/contao-doctrine-orm": "~2.0",
+    ],
+    "support": {
+        "issues": "https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable/issues",
+        "irc": "irc://irc.freenode.org/contao.dev",
+        "source": "https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable"
+    },
+    "require": {
+        "php": ">=5.4,<7.2",
+        "contao/core": ">=3.5,<4-dev",
+        "contao-community-alliance/composer-plugin": "~2.0",
+        "contaoblackforest/contao-doctrine-orm": "~2.0",
         "doctrine/migrations": "~v1.0",
-		"gedmo/doctrine-extensions": "~2.0"
-	},
-	"require-dev": {
-		"phpcq/all-tasks": "~1.1"
-	},
-  "autoload":{
-    "psr-4":{
-      "Contao\\Doctrine\\ORM\\Timestampable\\": "src/Timestampable/",
-      "Gedmo\\Timestampable\\Mapping\\Driver\\": "src/Driver/"
-    }
-  },
-	"autoload-dev": {
-		"psr-4": {
-      "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/Test/"
-		},
-		"files": [
-			"vendor/phpcq/autoload-validation/hacks/contao-hack.php"
-		]
-	},
-	"extra": {
-		"contao": {
-			"sources": {
-				"contao": "system/modules/doctrine-orm-timestampable"
-			}
-		},
-		"branch-alias": {
-			"dev-master": "2.0.x-dev",
-			"dev-develop": "2.1.x-dev"
-		}
-	},
+        "gedmo/doctrine-extensions": "~2.0"
+    },
+    "require-dev": {
+        "phpcq/all-tasks": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Contao\\Doctrine\\ORM\\Timestampable\\": "src/Timestampable/",
+            "Gedmo\\Timestampable\\Mapping\\Driver\\": "src/Driver/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/Test/"
+        },
+        "files": [
+            "vendor/phpcq/autoload-validation/hacks/contao-hack.php"
+        ]
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "contao": "system/modules/doctrine-orm-timestampable"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "2.0.x-dev",
+            "dev-develop": "2.1.x-dev"
+        }
+    },
     "replace": {
-      "bit3/contao-doctrine-orm-timestampable": "self.version"
+        "bit3/contao-doctrine-orm-timestampable": "self.version"
     }
 }

@@ -20,7 +20,9 @@
 
 namespace Contao\Doctrine\ORM\Timestampable\Tests\Fixtures;
 
-
+/**
+ * Version entity for tests.
+ */
 class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Contao\Doctrine\ORM\EntityInterface
 {
     /**
@@ -103,11 +105,13 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      * Set createdAt
      *
      * @param \DateTime $createdAt
+     *
      * @return Version
      */
     public function setCreatedAt(\DateTime $createdAt)
     {
-        $this->createdAt = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'createdAt', $createdAt);
+        $this->createdAt =
+            \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'createdAt', $createdAt);
 
         return $this;
     }
@@ -119,18 +123,29 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      */
     public function getCreatedAt()
     {
-        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks($this, self::TABLE_NAME, 'createdAt', $this->createdAt);
+        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'createdAt',
+            $this->createdAt
+        );
     }
 
     /**
      * Set entityClass
      *
      * @param string $entityClass
+     *
      * @return Version
      */
     public function setEntityClass($entityClass)
     {
-        $this->entityClass = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'entityClass', (string) $entityClass);
+        $this->entityClass = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'entityClass',
+            (string) $entityClass
+        );
 
         return $this;
     }
@@ -142,18 +157,29 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      */
     public function getEntityClass()
     {
-        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks($this, self::TABLE_NAME, 'entityClass', $this->entityClass);
+        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'entityClass',
+            $this->entityClass
+        );
     }
 
     /**
      * Set entityId
      *
      * @param string $entityId
+     *
      * @return Version
      */
     public function setEntityId($entityId)
     {
-        $this->entityId = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'entityId', (string) $entityId);
+        $this->entityId = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'entityId',
+            (string) $entityId
+        );
 
         return $this;
     }
@@ -165,18 +191,29 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      */
     public function getEntityId()
     {
-        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks($this, self::TABLE_NAME, 'entityId', $this->entityId);
+        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'entityId',
+            $this->entityId
+        );
     }
 
     /**
      * Set entityHash
      *
      * @param string $entityHash
+     *
      * @return Version
      */
     public function setEntityHash($entityHash)
     {
-        $this->entityHash = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'entityHash', (string) $entityHash);
+        $this->entityHash = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'entityHash',
+            (string) $entityHash
+        );
 
         return $this;
     }
@@ -188,18 +225,25 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      */
     public function getEntityHash()
     {
-        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks($this, self::TABLE_NAME, 'entityHash', $this->entityHash);
+        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'entityHash',
+            $this->entityHash
+        );
     }
 
     /**
      * Set action
      *
      * @param string $action
+     *
      * @return Version
      */
     public function setAction($action)
     {
-        $this->action = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'action', (string) $action);
+        $this->action =
+            \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'action', (string) $action);
 
         return $this;
     }
@@ -218,11 +262,17 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      * Set previous
      *
      * @param string $previous
+     *
      * @return Version
      */
     public function setPrevious($previous = null)
     {
-        $this->previous = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'previous', $previous === null ? null : (string) $previous);
+        $this->previous = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'previous',
+            $previous === null ? null : (string) $previous
+        );
 
         return $this;
     }
@@ -234,18 +284,25 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      */
     public function getPrevious()
     {
-        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks($this, self::TABLE_NAME, 'previous', $this->previous);
+        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'previous',
+            $this->previous
+        );
     }
 
     /**
      * Set data
      *
      * @param string $data
+     *
      * @return Version
      */
     public function setData($data)
     {
-        $this->data = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'data', (string) $data);
+        $this->data =
+            \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'data', (string) $data);
 
         return $this;
     }
@@ -264,11 +321,17 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      * Set changes
      *
      * @param string $changes
+     *
      * @return Version
      */
     public function setChanges($changes = null)
     {
-        $this->changes = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'changes', $changes === null ? null : (string) $changes);
+        $this->changes = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'changes',
+            $changes === null ? null : (string) $changes
+        );
 
         return $this;
     }
@@ -280,18 +343,29 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      */
     public function getChanges()
     {
-        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks($this, self::TABLE_NAME, 'changes', $this->changes);
+        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'changes',
+            $this->changes
+        );
     }
 
     /**
      * Set userId
      *
      * @param integer $userId
+     *
      * @return Version
      */
     public function setUserId($userId = null)
     {
-        $this->userId = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'userId', $userId === null ? null : (int) $userId);
+        $this->userId = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'userId',
+            $userId === null ? null : (int) $userId
+        );
 
         return $this;
     }
@@ -310,11 +384,17 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      * Set username
      *
      * @param string $username
+     *
      * @return Version
      */
     public function setUsername($username = null)
     {
-        $this->username = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks($this, self::TABLE_NAME, 'username', $username === null ? null : (string) $username);
+        $this->username = \Contao\Doctrine\ORM\EntityHelper::callSetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'username',
+            $username === null ? null : (string) $username
+        );
 
         return $this;
     }
@@ -326,7 +406,12 @@ class Version extends \Contao\Doctrine\ORM\Entity\AbstractVersion implements \Co
      */
     public function getUsername()
     {
-        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks($this, self::TABLE_NAME, 'username', $this->username);
+        return \Contao\Doctrine\ORM\EntityHelper::callGetterCallbacks(
+            $this,
+            self::TABLE_NAME,
+            'username',
+            $this->username
+        );
     }
 
     /**

@@ -20,7 +20,6 @@
 
 namespace Contao\Doctrine\ORM\Timestampable\Tests;
 
-
 use Contao\Doctrine\ORM\EntityAccessor;
 use Contao\Doctrine\ORM\Event\DuplicateEntity;
 use Contao\Doctrine\ORM\Timestampable\Bridge;
@@ -30,20 +29,15 @@ use Doctrine\Common\EventManager;
 use Gedmo\Timestampable\TimestampableListener;
 
 /**
- * Class BridgeTest
- *
- * @author  Dominik Tomasi <https://github.com/dtomasi>
- * @package ContaoBlackForest\Tests\Contao\Doctrine\ORM\Timestampable
+ * Bridge test class.
  */
 class BridgeTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * Test to instantiate the Bridge with Namespace ContaoBlackForest
      */
     public function testInstantiateWithCurrentNamespace()
     {
-
         $bridge = new Bridge();
         $this->assertInstanceOf('\Contao\Doctrine\ORM\Timestampable\Bridge', $bridge);
     }
@@ -53,7 +47,6 @@ class BridgeTest extends \PHPUnit_Framework_TestCase
      */
     public function testRegisterSubscriber()
     {
-
         $manager = new EventManager();
         Bridge::init($manager);
         $this->assertTrue($manager->hasListeners('prePersist'));
@@ -73,26 +66,25 @@ class BridgeTest extends \PHPUnit_Framework_TestCase
      */
     public function testDuplicateEntity()
     {
-
         $entity = new Version();
 
         // Setup EntityAccessor
-        $accessor = new EntityAccessor(new AnnotationReader());
+        $accessor                                            = new EntityAccessor(new AnnotationReader());
         $GLOBALS['container']['doctrine.orm.entityAccessor'] = $accessor;
-        $event = new DuplicateEntity($entity, true);
+        $event                                               = new DuplicateEntity($entity, true);
 
         $GLOBALS['TL_DCA'] = array(
             'orm_version' => array(
-                'id' => array(
+                'id'        => array(
                     'field' => array(
-                        'id' => true,
+                        'id'   => true,
                         'type' => 'integer',
                     )
                 ),
                 'createdAt' => array(
                     'field' => array(
-                        'type' => 'datetime',
-                        'nullable' => true,
+                        'type'          => 'datetime',
+                        'nullable'      => true,
                         'timestampable' => array('on' => 'create')
                     )
                 ),
