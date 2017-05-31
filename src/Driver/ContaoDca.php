@@ -42,8 +42,14 @@ class ContaoDca extends \Controller implements Driver
     }
 
     /**
-     * @see \Gedmo\Mapping\Driver::readExtendedMetadata()
-     * {@inheritdoc}
+     * Read extended metadata configuration for
+     * a single mapped class
+     *
+     * @param object $meta   The meta information.
+     *
+     * @param array  $config The configuration.
+     *
+     * @return void
      *
      * @SuppressWarnings(PHPMD.Superglobals)
      */
@@ -64,8 +70,11 @@ class ContaoDca extends \Controller implements Driver
     }
 
     /**
-     * @see \Gedmo\Mapping\Driver::setOriginalDriver()
-     * {@inheritdoc}
+     * Passes in the original driver
+     *
+     * @param object $driver The driver.
+     *
+     * @return void
      */
     public function setOriginalDriver($driver)
     {
