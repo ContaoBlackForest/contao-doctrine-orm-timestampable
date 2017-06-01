@@ -29,7 +29,7 @@ use Doctrine\Common\EventManager;
 use Gedmo\Timestampable\TimestampableListener;
 
 /**
- * Bridge test class.
+ * Test class for \Contao\Doctrine\ORM\Timestampable\Bridge.
  */
 class BridgeTest extends \PHPUnit_Framework_TestCase
 {
