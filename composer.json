@@ -47,7 +47,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Contao\\Doctrine\\ORM\\Timestampable\\Tests\\": "tests/Test/"
+            "Contao\\Doctrine\\ORM\\Test\\Timestampable\\": "tests/Test/"
         },
         "files": [
             "vendor/phpcq/autoload-validation/hacks/contao-hack.php"

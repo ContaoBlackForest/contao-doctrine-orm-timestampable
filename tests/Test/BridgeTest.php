@@ -18,12 +18,12 @@
  * @filesource
  */
 
-namespace Contao\Doctrine\ORM\Timestampable\Tests;
+namespace Contao\Doctrine\ORM\Test\Timestampable;
 
 use Contao\Doctrine\ORM\EntityAccessor;
 use Contao\Doctrine\ORM\Event\DuplicateEntity;
+use Contao\Doctrine\ORM\Test\Timestampable\Fixtures\Version;
 use Contao\Doctrine\ORM\Timestampable\Bridge;
-use Contao\Doctrine\ORM\Timestampable\Tests\Fixtures\Version;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\EventManager;
 use Gedmo\Timestampable\TimestampableListener;

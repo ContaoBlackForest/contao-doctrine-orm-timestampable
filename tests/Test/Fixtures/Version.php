@@ -18,7 +18,7 @@
  * @filesource
  */
 
-namespace Contao\Doctrine\ORM\Timestampable\Tests\Fixtures;
+namespace Contao\Doctrine\ORM\Test\Timestampable\Fixtures;
 
 /**
  * Version entity for tests.
