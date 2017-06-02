@@ -50,6 +50,7 @@
             "Contao\\Doctrine\\ORM\\Test\\Timestampable\\": "tests/Test/Timestampable/",
             "Gedmo\\Timestampable\\Mapping\\Test\\Driver\\": "tests/Test/Driver/"
         },
+        "classmap": ["tests/Test/BaseTestCase.php"],
         "files": [
             "vendor/phpcq/autoload-validation/hacks/contao-hack.php"
         ]
