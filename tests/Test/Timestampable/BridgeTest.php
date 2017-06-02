@@ -22,6 +22,7 @@ namespace Contao\Doctrine\ORM\Test\Timestampable;
 
 use Contao\Doctrine\ORM\EntityAccessor;
 use Contao\Doctrine\ORM\Event\DuplicateEntity;
+use Contao\Doctrine\ORM\Test\BaseTestCase;
 use Contao\Doctrine\ORM\Test\Timestampable\Fixtures\Version;
 use Contao\Doctrine\ORM\Timestampable\Bridge;
 use Doctrine\Common\Annotations\AnnotationReader;
@@ -31,7 +32,7 @@ use Gedmo\Timestampable\TimestampableListener;
 /**
  * Test class for \Contao\Doctrine\ORM\Timestampable\Bridge.
  */
-class BridgeTest extends \PHPUnit_Framework_TestCase
+class BridgeTest extends BaseTestCase
 {
     /**
      * Test to instantiate the Bridge with Namespace ContaoBlackForest
@@ -112,25 +113,7 @@ class BridgeTest extends \PHPUnit_Framework_TestCase
      */
     public function testDuplicateEntity()
     {
-
-        $GLOBALS['TL_DCA']['orm_version'] = array(
-            'fields' => array(
-
-                'id'        => array(
-                    'field' => array(
-                        'id'   => true,
-                        'type' => 'integer',
-                    )
-                ),
-                'createdAt' => array(
-                    'field' => array(
-                        'type'          => 'datetime',
-                        'nullable'      => true,
-                        'timestampable' => array('on' => 'create')
-                    )
-                )
-            )
-        );
+        $this->setUpDataContainerVersion();
 
         $entity1  = new Version();
         $entity11 = new Version();

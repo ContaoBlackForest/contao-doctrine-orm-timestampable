@@ -25,4 +25,25 @@ namespace Contao\Doctrine\ORM\Test;
  */
 abstract class BaseTestCase extends \PHPUnit_Framework_TestCase
 {
+    protected function setUpDataContainerVersion()
+    {
+        $GLOBALS['TL_DCA']['orm_version'] = array(
+            'fields' => array(
+
+                'id'        => array(
+                    'field' => array(
+                        'id'   => true,
+                        'type' => 'integer',
+                    )
+                ),
+                'createdAt' => array(
+                    'field' => array(
+                        'type'          => 'datetime',
+                        'nullable'      => true,
+                        'timestampable' => array('on' => 'create')
+                    )
+                )
+            )
+        );
+    }
 }
