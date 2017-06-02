@@ -19,15 +19,51 @@
 
 namespace Gedmo\Timestampable\Mapping\Test\Driver;
 
+use Contao\Doctrine\ORM\Mapping\Driver\ContaoDcaDriver;
 use Contao\Doctrine\ORM\Test\BaseTestCase;
+use Doctrine\ORM\Mapping\ClassMetadata;
+use Gedmo\Timestampable\Mapping\Driver\ContaoDca;
 
 /**
  * Test class for \Gedmo\Timestampable\Mapping\Driver\ContaoDca
  */
 class ContaoDcaTest extends BaseTestCase
 {
-
-    public function test()
+    /**
+     * Test if find property timestamp able who has create on.
+     *
+     * @covers \Gedmo\Timestampable\Mapping\Driver\ContaoDca::__construct
+     * @covers \Gedmo\Timestampable\Mapping\Driver\ContaoDca::readExtendedMetadata
+     */
+    public function testReadExtendedMetadata()
     {
+        $this->aliasContaoClass('Controller');
+
+        $contaoDca = new ContaoDca();
+
+        $meta = new ClassMetadata('orm_version');
+        $meta->setPrimaryTable(array('name' => 'orm_version'));
+
+        $config = array();
+        $contaoDca->readExtendedMetadata($meta, $config);
+
+        $this->assertArrayHasKey('create', $config);
+        $this->assertArraySubset(array('createdAt'), $config['create']);
+    }
+
+    /**
+     * Test if can set the original driver.
+     *
+     * @covers \Gedmo\Timestampable\Mapping\Driver\ContaoDca::setOriginalDriver
+     */
+    public function testSetOriginalDriver()
+    {
+        $contaoDca = new ContaoDca();
+
+        $driver = new ContaoDcaDriver('');
+
+        $contaoDca->setOriginalDriver($driver);
+
+        $this->assertAttributeNotEmpty('originalDriver', $contaoDca);
     }
 }
