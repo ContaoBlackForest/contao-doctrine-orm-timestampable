@@ -21,25 +21,18 @@
 
 namespace Gedmo\Timestampable\Mapping\Driver;
 
+use Contao\Controller;
 use Gedmo\Mapping\Driver;
 
 /**
  * The timestamp able mapping driver for contao data container.
  */
-class ContaoDca extends \Controller implements Driver
+class ContaoDca implements Driver
 {
     /**
      * Original driver if it is available.
      */
     protected $originalDriver = null;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     /**
      * Read extended metadata configuration for
@@ -57,7 +50,7 @@ class ContaoDca extends \Controller implements Driver
     {
         $tableName = $meta->getTableName();
         if (!isset($GLOBALS['TL_DCA'][$tableName])) {
-            $this->loadDataContainer($tableName);
+            Controller::loadDataContainer($tableName);
         }
 
         $dca    = (array) $GLOBALS['TL_DCA'][$tableName];
