@@ -31,6 +31,8 @@ class ContaoDca implements Driver
 {
     /**
      * Original driver if it is available.
+     *
+     * @var object
      */
     protected $originalDriver = null;
 
