@@ -52,7 +52,7 @@ class ContaoDca implements Driver
     {
         $tableName = $meta->getTableName();
         if (!isset($GLOBALS['TL_DCA'][$tableName])) {
-            Controller::loadDataContainer($tableName);
+            $this->loadDataContainer($tableName);
         }
 
         $dca    = (array) $GLOBALS['TL_DCA'][$tableName];
@@ -62,6 +62,18 @@ class ContaoDca implements Driver
                 $config[$field['field']['timestampable']['on']][] = $fieldName;
             }
         }
+    }
+
+    /**
+     * Load the data container.
+     *
+     * @param string $tableName The table name.
+     *
+     * @return void
+     */
+    protected function loadDataContainer($tableName)
+    {
+        Controller::loadDataContainer($tableName);
     }
 
     /**
