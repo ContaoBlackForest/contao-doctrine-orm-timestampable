@@ -26,18 +26,6 @@ namespace Contao\Doctrine\ORM\Test;
 abstract class BaseTestCase extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Set alias for contao classes to use own for can use phpunit tests.
-     *
-     * @param string $class The class name.
-     *
-     * @return void
-     */
-    protected function aliasContaoClass($class)
-    {
-        class_alias('\\Contao\\Doctrine\\ORM\\Test\\Helper\\Contao\\' . $class, $class);
-    }
-
-    /**
      * Setup the data container version for tests.
      *
      * @return void

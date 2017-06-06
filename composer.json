@@ -48,8 +48,7 @@
     "autoload-dev": {
         "psr-4": {
             "Contao\\Doctrine\\ORM\\Test\\Timestampable\\": "tests/Test/Timestampable/",
-            "Gedmo\\Timestampable\\Mapping\\Test\\Driver\\": "tests/Test/Driver/",
-            "Contao\\Doctrine\\ORM\\Test\\Helper\\": "tests/Test/Helper"
+            "Gedmo\\Timestampable\\Mapping\\Test\\Driver\\": "tests/Test/Driver/"
         },
         "classmap": ["tests/Test/BaseTestCase.php"],
         "files": [
