@@ -69,6 +69,8 @@ class ContaoDca implements Driver
      *
      * @param string $tableName The table name.
      *
+     * @codeCoverageIgnore
+     *
      * @return void
      */
     protected function loadDataContainer($tableName)
