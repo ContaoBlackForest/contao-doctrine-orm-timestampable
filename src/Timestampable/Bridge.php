@@ -1,16 +1,21 @@
 <?php
 
 /**
- * Doctrine ORM timestampable bridge
+ * This file is part of contaoblackforest/contao-doctrine-orm-timestampable.
  *
- * PHP version 5
+ * (c) 2013-2017 Contao Black Forest.
  *
- * @copyright  ContaoBlackForest <https://github.com/ContaoBlackForest/>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * This project is provided in good faith and hope to be usable by anyone.
+ *
+ * @package    contaoblackforest/contao-doctrine-orm-timestampable
  * @author     Tristan Lins <tristan.lins@bit3.de>
  * @author     Dominik Tomasi <dominik.tomasi@gmail.com>
- * @author     Sven Baumann <baumannsv@gmail.com>
- * @package    doctrine-orm-timestampable
- * @license    LGPL
+ * @author     Sven Baumann <baumann.sv@gmail.com>
+ * @copyright  2013-2017 Contao Community Alliance.
+ * @license    https://github.com/ContaoBlackForest/contao-doctrine-orm-timestampable/blob/master/LICENSE LGPL-3.0
  * @filesource
  */
 
@@ -22,17 +27,16 @@ use Doctrine\Common\EventManager;
 use Gedmo\Timestampable\TimestampableListener;
 
 /**
- * Class Bridge
- *
- * @author Tristan Lins <tristan.lins@bit3.de>
- * @package ContaoBlackForest\Contao\Doctrine\ORM\Timestampable
+ * Contao bridge for doctrine orm timestamp able.
  */
 class Bridge
 {
     /**
-     * Initialize the Bridge
+     * Initialize the Bridge.
      *
-     * @param EventManager $eventManager
+     * @param EventManager $eventManager The event manager.
+     *
+     * @return void
      */
     public static function init(EventManager $eventManager)
     {
@@ -41,9 +45,13 @@ class Bridge
     }
 
     /**
-     * Clean timestampable entries from duplicated entities.
+     * Clean timestamp able entries from duplicated entities.
      *
-     * @param DuplicateEntity $event
+     * @param DuplicateEntity $event The event.
+     *
+     * @return void
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public static function duplicateEntity(DuplicateEntity $event)
     {
@@ -54,7 +62,7 @@ class Bridge
                 /** @var EntityAccessor $entityAccessor */
                 $entityAccessor = $GLOBALS['container']['doctrine.orm.entityAccessor'];
 
-                $fields = (array)$GLOBALS['TL_DCA'][$entity->entityTableName()]['fields'];
+                $fields = (array) $GLOBALS['TL_DCA'][$entity->entityTableName()]['fields'];
                 foreach ($fields as $field => $fieldConfig) {
                     if (isset($fieldConfig['field']['timestampable'])) {
                         $entityAccessor->setRawProperty($entity, $field, null);

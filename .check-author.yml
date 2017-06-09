@@ -1,0 +1,6 @@
+exclude:
+  languages
+
+mapping:
+  "Dominik Tomasi <dominik.tomasi@gmail.com>":
+    - "Dominik Tomasi <d.tomasi@upcom.ch>"
